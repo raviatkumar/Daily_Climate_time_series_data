@@ -1,4 +1,4 @@
-# Daily_Climate_time_series_data
+# Daily Climate time series data
 
 This project aims to construct a weather forecasting model tailored for the Indian climate, utilizing a dataset spanning from January 1, 2013, to April 24, 2017, in Delhi. The parameters - meantemp, humidity, wind_speed, and meanpressure - play a crucial role. Acquired from Weather Underground API, the dataset is central to Assignment 4 of the 2019 Data Analytics Course at PES University, Bangalore. The goal involves data exploration, preprocessing, and the development and evaluation of a machine learning model.
 
