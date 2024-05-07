@@ -1,24 +1,18 @@
-# Daily Climate time series data
-
-This project aims to construct a weather forecasting model tailored for the Indian climate, utilizing a dataset spanning from January 1, 2013, to April 24, 2017, in Delhi. The parameters - meantemp, humidity, wind_speed, and meanpressure - play a crucial role. Acquired from Weather Underground API, the dataset is central to Assignment 4 of the 2019 Data Analytics Course at PES University, Bangalore. The goal involves data exploration, preprocessing, and the development and evaluation of a machine learning model.
-
-
-## Summary:
+Summary:
 
 1. Project Title: Daily Climate Time Series Data
-2. Objective: Construct a weather forecasting model for Delhi using a dataset spanning from January 1, 2013, to April 24, 2017, including parameters like meantemp, humidity, wind_speed, and meanpressure.
-3. Data Source: Weather Underground API.
-4. Data Exploration: Analyzed seasonal patterns, upward trends, and distribution characteristics of temperature, precipitation, wind speed, and CO2 concentrations.
-5. Model Development: Utilized SARIMAX model for temperature forecasting.
-6. Model Evaluation: Evaluated the SARIMAX model using metrics like Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE).
-7. Model Performance: The SARIMAX model demonstrated reasonable accuracy in temperature predictions, with MAE of approximately 3.82, MSE of approximately 5.04, and RMSE of approximately 5.04.
+2. Objective: Construct a weather forecasting model tailored for climate analysis, utilizing a dataset covering the period from January 1, 2013, to April 24, 2017. Key parameters include meantemp, humidity, wind_speed, and meanpressure.
+3. Data Analysis: Conducted Augmented Dickey-Fuller (ADF) tests to assess stationarity, revealing that meantemp is likely non-stationary while humidity, wind_speed, and meanpressure are likely stationary. Explored autocorrelation function (ACF) and partial autocorrelation function (PACF) plots to understand time series dependencies.
+4. Model Development: Utilized SARIMAX model to forecast mean temperature based on the dataset, specifying parameters (0, 1, 0) for the non-seasonal part and (0, 1, 0, 12) for the seasonal part.
+5. Performance Metrics: Calculated Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE) to quantify the accuracy of the SARIMAX model's predictions.
+6. SARIMA Model: Evaluated SARIMA model's ability to capture seasonal patterns and overall temperature trends, noting some discrepancies between actual and forecasted temperature data.
 
-## Conclusion:
+Conclusion:
 
-1. The SARIMAX model effectively captured seasonal patterns and upward trends in temperature data.
-2. It provided valuable insights into temperature anomalies, CO2 concentrations, and wind speed variations.
-3. The ACF and PACF plots indicated short-term dependency in temperature data, supporting the choice of SARIMAX model.
-4. The SARIMAX results revealed significant autocorrelation at lag 1, suggesting a strong correlation between consecutive temperature values.
-5. Despite some discrepancies between actual and forecasted temperatures, the SARIMAX model demonstrated overall satisfactory performance in temperature forecasting.
+1. The project successfully developed and evaluated a SARIMAX model for forecasting mean temperature in Delhi based on historical climate data.
+2. ADF tests indicated stationarity of humidity, wind_speed, and meanpressure, while meantemp required further transformation for stationarity.
+3. ACF and PACF plots provided insights into short-term dependencies and guided the choice of SARIMAX model parameters.
+4. SARIMAX model evaluation revealed satisfactory performance in capturing temperature variations, with reasonable accuracy indicated by low MAE, MSE, and RMSE values.
+5. While the SARIMA model showed potential in capturing seasonal patterns, some discrepancies between actual and forecasted temperature data were observed, highlighting areas for model improvement.
 
-Overall, the SARIMAX model proved to be a valuable tool for analyzing and forecasting temperature variations in Delhi's climate dataset, providing actionable insights for weather prediction and climate analysis.
+Overall, the project contributed to climate analysis by providing insights into temperature forecasting and modeling techniques, with potential for further refinement and application in weather prediction and climate research.
